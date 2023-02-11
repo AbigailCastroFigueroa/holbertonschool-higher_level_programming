@@ -1,0 +1,11 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(1, 2)
+3
+>>> add_integer("hello", i)
+Traceback (most recent call last):
+...
+>>> add_integer("s", 3)
+Traceback (most recent call last):
+...
+>>> add_integer(5, 10)
+15
