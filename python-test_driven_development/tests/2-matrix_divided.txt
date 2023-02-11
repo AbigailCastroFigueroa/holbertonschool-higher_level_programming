@@ -22,4 +22,4 @@ TypeError: div must be a number
 >>> matrix_divided(matrix, 2)
 Traceback (most recent call last):
     ...
-TypeError: matrix must be a matrix (list of list) of integers/float
+TypeError: matrix must be a matrix (list of lists) of integers/floats
