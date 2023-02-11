@@ -7,7 +7,7 @@ def add_integer(a, b=98):
 
     Args:
         a: first value.
-        b: second value.    
+        b: second value.
     """
     try:
         return int(a + b)
