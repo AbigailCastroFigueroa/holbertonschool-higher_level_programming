@@ -1,9 +1,9 @@
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 >>> say_my_name("Shira", "Lopez")
-Shira Lopez
+My name is Shira Lopez
 >>> say_my_name(12, "Yoshi")
 Traceback (most recent call last):
     ...
 TypeError: first_name must be a string
 >>> say_my_name("", "Maeda")
- Maeda
+My name is  Maeda
