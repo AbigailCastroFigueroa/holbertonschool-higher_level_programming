@@ -68,4 +68,5 @@ class Rectangle:
 
     def __repr__(self):
         """Create an instance."""
-        return "Rectangle(" + str(self.__width) + ", " + str(self.__height) + ")"
+        a, b = str(self.__width), str(self.__height)
+        return 'Rectangle(' + a + ', ' + b + ')'
