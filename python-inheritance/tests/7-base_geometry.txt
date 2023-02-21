@@ -11,3 +11,46 @@ Traceback (most recent call last):
 TypeError: age must be an integer
 >>> bg.integer_validator("age", 12)
 >>> 
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+    ...
+Exception: area() is not implemented
+>>> bg.integer_validator()
+Traceback (most recent call last):
+    ...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+>>> bg.integer_validator("age", -5)
+Traceback (most recent call last):
+    ...
+ValueError: age must be greater than 0
+>>> bg.integer_validator("distance", 0)
+Traceback (most recent call last):
+    ...
+ValueError: distance must be greater than 0
+>>> bg.integer_validator("John", None)
+Traceback (most recent call last):
+    ...
+TypeError: John must be an integer
+>>> bg.integer_validator("white", False)
+Traceback (most recent call last):
+    ...
+TypeError: white must be an integer
+>>> bg.integer_validator("Water", (1, 2))
+Traceback (most recent call last):
+    ...
+TypeError: Water must be an integer
+>>> bg.integer_validator("miles", [9])
+Traceback (most recent call last):
+    ...
+TypeError: miles must be an integer
+>>> bg.integer_validator("numbers", (1, ))
+Traceback (most recent call last):
+    ...
+TypeError: numbers must be an integer
+>>> bg.integer_validator("list", [1, 2, 3])
+Traceback (most recent call last):
+    ...
+TypeError: list must be an integer
