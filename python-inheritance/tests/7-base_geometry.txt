@@ -1,0 +1,13 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("distance", 12)
+>>> bg.integer_validator("Johnny", "Walker")
+Traceback (most recent call last):
+    ...
+TypeError: Johnny must be an integer
+>>> bg.integer_validator("age", "")
+Traceback (most recent call last):
+    ...
+TypeError: age must be an integer
+>>> bg.integer_validator("age", 12)
+>>> 
