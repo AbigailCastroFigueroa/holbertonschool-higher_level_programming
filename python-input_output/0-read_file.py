@@ -5,7 +5,7 @@
 def read_file(filename=""):
     """Read a file given."""
     if filename == "":
-        return ""
+        return
     with open(filename, encoding='utf-8') as file:
         for line in file:
-            print(line.strip())
+            print(line, end="")
