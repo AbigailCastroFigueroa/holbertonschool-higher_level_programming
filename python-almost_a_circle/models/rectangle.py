@@ -9,11 +9,11 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Rectangle class constructor."""
+        super().__init__(id)
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
-        self.__id = super().__init__(id)
         if type(height) is not int:
             raise TypeError("height must be an integer")
         if type(width) is not int:
@@ -93,3 +93,12 @@ class Rectangle(Base):
             for var in range(self.__width):
                 print('#', end="")
             print()
+
+    def __str__(self):
+        """Return a custom string."""
+        a = str(self.id)
+        b = str(self.width)
+        c = str(self.__height)
+        d = str(self.__x)
+        e = str(self.__y)
+        return "[Rectangle] (" + a + ") " + d + "/" + e + " - " + b + "/" + c
