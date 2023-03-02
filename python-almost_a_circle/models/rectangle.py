@@ -90,6 +90,7 @@ class Rectangle(Base):
     def display(self):
         """Print a representation of the rectangle."""
         for row in range(self.__height):
+            print(' ' * self.__y, end="")
             for var in range(self.__width):
                 print('#', end="")
             print()
