@@ -105,28 +105,32 @@ class Rectangle(Base):
         e = str(self.__y)
         return "[Rectangle] (" + a + ") " + d + "/" + e + " - " + b + "/" + c
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Assings arguments to each attribute."""
-        for i in range(len(args)):
-            if i == 0:
-                self.id = args[0]
-            elif i == 1:
-                self.id = args[0]
-                self.__width = args[1]
-            elif i == 2:
-                self.id = args[0]
-                self.__width = args[1]
-                self.__height = args[2]
-            elif i == 3:
-                self.id = args[0]
-                self.__width = args[1]
-                self.__height = args[2]
-                self.__x = args[3]
-            elif i == 4:
-                self.id = args[0]
-                self.__width = args[1]
-                self.__height = args[2]
-                self.__x = args[3]
-                self.__y = args[4]
-            else:
-                self
+        if args:
+            for i in range(len(args)):
+                if i == 0:
+                    self.id = args[0]
+                elif i == 1:
+                    self.id = args[0]
+                    self.__width = args[1]
+                elif i == 2:
+                    self.id = args[0]
+                    self.__width = args[1]
+                    self.__height = args[2]
+                elif i == 3:
+                    self.id = args[0]
+                    self.__width = args[1]
+                    self.__height = args[2]
+                    self.__x = args[3]
+                elif i == 4:
+                    self.id = args[0]
+                    self.__width = args[1]
+                    self.__height = args[2]
+                    self.__x = args[3]
+                    self.__y = args[4]
+                else:
+                    self
+        else:
+            for i, j in kwargs.items():
+                setattr(self, i, j)
