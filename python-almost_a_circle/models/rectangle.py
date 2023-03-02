@@ -91,7 +91,7 @@ class Rectangle(Base):
         """Print a representation of the rectangle."""
         for i in range(self.__y):
             print()
-        for row in range(self.height):
+        for row in range(self.__height):
             print(' ' * self.__x, end="")
             print('#' * self.__width, end="")
             print()
@@ -104,3 +104,29 @@ class Rectangle(Base):
         d = str(self.__x)
         e = str(self.__y)
         return "[Rectangle] (" + a + ") " + d + "/" + e + " - " + b + "/" + c
+
+    def update(self, *args):
+        """Assings arguments to each attribute."""
+        for i in range(len(args)):
+            if i == 0:
+                self.id = args[0]
+            elif i == 1:
+                self.id = args[0]
+                self.__width = args[1]
+            elif i == 2:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+            elif i == 3:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+            elif i == 4:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+                self.__y = args[4]
+            else:
+                self
