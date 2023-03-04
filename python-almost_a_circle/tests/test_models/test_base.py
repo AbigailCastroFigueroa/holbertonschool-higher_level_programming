@@ -1,6 +1,6 @@
-#!/usr/bin/python3
-"""Base tests."""
-
+!/usr/bin/python3
+"""Base tests
+"""
 from models.base import Base
 import unittest
 import os
@@ -76,7 +76,7 @@ class BaseTest(unittest.TestCase):
         with self.assertRaises(TypeError) as e:
             b = Base.to_json_string()
             self.assertEqual("to_json_string() missing 1 required positional " +
-                             "argument: 'list_dictionaries'", str(e.exception))
+                         "argument: 'list_dictionaries'", str(e.exception))
 
     def test_list_of_dicts_json(self):
         b = Base.to_json_string([{"talla": 5}, {"ancho": 12}])
@@ -86,7 +86,7 @@ class BaseTest(unittest.TestCase):
         with self.assertRaises(TypeError) as e:
             b = Base.save_to_file()
             self.assertEqual("save_to_file() missing 1 required positional " +
-                             "argument: 'list_objs'", str(e.exception))
+                         "argument: 'list_objs'", str(e.exception))
 
     def test_save_to_file_None(self):
         Base.save_to_file(None)
@@ -97,8 +97,8 @@ class BaseTest(unittest.TestCase):
         '''Tests constructor '''
         with self.assertRaises(TypeError) as e:
             Base.__init__()
-        b = "__init__() missing 1 required positional argument: 'self'"
-        self.assertEqual(str(e.exception), b)
+            b = "__init__() missing 1 required positional argument: 'self'"
+            self.assertEqual(str(e.exception), b)
 
     def test_instantiation(self):
         '''Test instantiation.'''
@@ -121,3 +121,4 @@ class BaseTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+    
