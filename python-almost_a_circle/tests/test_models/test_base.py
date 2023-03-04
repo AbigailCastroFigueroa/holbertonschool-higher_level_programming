@@ -1,4 +1,4 @@
-!/usr/bin/python3
+#!/usr/bin/python3
 """Base tests
 """
 from models.base import Base
@@ -58,7 +58,7 @@ class BaseTest(unittest.TestCase):
     def test_none_json(self):
         """ snet nothing to function"""
         b = Base.to_json_string(None)
-        self.assertEqual(b, "[]")
+        self.assertEqual(b, [])
 
     def test_list_json(self):
         """ snet list to function"""
@@ -76,7 +76,7 @@ class BaseTest(unittest.TestCase):
         with self.assertRaises(TypeError) as e:
             b = Base.to_json_string()
             self.assertEqual("to_json_string() missing 1 required positional " +
-                         "argument: 'list_dictionaries'", str(e.exception))
+                             "argument: 'list_dictionaries'", str(e.exception))
 
     def test_list_of_dicts_json(self):
         b = Base.to_json_string([{"talla": 5}, {"ancho": 12}])
@@ -86,7 +86,7 @@ class BaseTest(unittest.TestCase):
         with self.assertRaises(TypeError) as e:
             b = Base.save_to_file()
             self.assertEqual("save_to_file() missing 1 required positional " +
-                         "argument: 'list_objs'", str(e.exception))
+                             "argument: 'list_objs'", str(e.exception))
 
     def test_save_to_file_None(self):
         Base.save_to_file(None)
@@ -121,4 +121,3 @@ class BaseTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-    
