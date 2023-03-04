@@ -9,6 +9,7 @@ class Square(Rectangle):
 
     def __init__(self, size, x=0, y=0, id=None):
         """Square class constructor method."""
+        self.size = size
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
@@ -41,3 +42,7 @@ class Square(Rectangle):
         else:
             for i, j in kwargs.items():
                 setattr(self, i, j)
+
+    def to_dictionary(self):
+        """Return dictionary representation."""
+        return self.__dict__
