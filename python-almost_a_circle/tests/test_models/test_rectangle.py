@@ -12,7 +12,7 @@ class RectangleTest(unittest.TestCase):
 
     def test_instance(self):
         r = Rectangle(1, 2)
-        self.assertEqual(isinstance(r, Base), True)
+        self.assertEqual(isinstance(r, Rectangle), True)
 
 
 if __name__ == "__main__":
