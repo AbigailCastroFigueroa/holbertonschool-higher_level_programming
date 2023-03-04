@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Base class module."""
 
+import json
+
 
 class Base:
     """Base class as constructor."""
@@ -14,3 +16,7 @@ class Base:
             self.id = Base.__nb_objects
         else:
             self.id = id
+
+    def to_json_string(list_dictionaries):
+        """Turn data from python to JSON."""
+        return json.dumps(list_dictionaries)
