@@ -10,9 +10,10 @@ from models.rectangle import Rectangle
 class RectangleTest(unittest.TestCase):
     """Test for the rectangle class methods."""
 
-    def test_instance(self):
+    def test_exist(self):
         r = Rectangle(1, 2)
-        self.assertEqual(isinstance(r, Rectangle), True)
+        message = "<class 'models.rectangle.Rectangle'>"
+        self.assertEqual(str(type(r)), message)
 
 
 if __name__ == "__main__":
