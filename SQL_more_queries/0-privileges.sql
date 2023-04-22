@@ -1,3 +1,3 @@
- -- list user privileges in the host server.
+-- list user privileges in the host server.
 SHOW GRANTS FOR 'user_0d_1'@'localhost'; SHOW GRANTS FOR 'user_0d_2'@'localhost';
 
