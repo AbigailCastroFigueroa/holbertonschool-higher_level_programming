@@ -13,9 +13,9 @@ if __name__ == '__main__':
         host=my_host, user=my_user, password=my_pwd, db=my_database, port=3306)
 
     cur = working_database.cursor()
-    selected_state = sys.argv[4]
-    cur.execute(
-        "SELECT * FROM states WHERE name='{selected_state}' COLLATE utf8mb4_bin ORDER BY id ASC;")
+    sel_state = sys.argv[4]
+    cur.execute("SELECT * FROM states WHERE name='{}'\
+                COLLATE utf8mb4_bin ORDER BY id ASC;".format(sel_state))
     for i in cur:
         print(i)
     working_database.close()
