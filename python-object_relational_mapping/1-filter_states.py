@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Script to filter by a given condition to a MySQL database using python script."""
+"""Script to filter by a given condition."""
 import sys
 import MySQLdb
 
@@ -13,7 +13,8 @@ if __name__ == '__main__':
         host=my_host, user=my_user, password=my_pwd, db=my_database, port=3306)
 
     cur = working_database.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC;")
+    cur.execute(
+        "SELECT * FROM states WHERE name LIKE 'N%' OR 'n%' ORDER BY id ASC;")
     for i in cur:
         print(i)
     working_database.close()
