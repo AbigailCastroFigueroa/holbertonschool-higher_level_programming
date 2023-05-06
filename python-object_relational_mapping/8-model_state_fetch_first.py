@@ -18,4 +18,4 @@ if __name__ == "__main__":
         id, name = data.id, data.name
         print(f"{id}: {name}")
     else:
-        print()
+        print('Nothing')
